@@ -1,6 +1,8 @@
 package main.java.aktorius.com.services;
 
+import main.java.aktorius.com.adapters.EmployeeAdapterLdap;
 import main.java.aktorius.com.datasources.EmployeeDB;
+import main.java.aktorius.com.datasources.EmployeeLdap;
 import main.java.aktorius.com.interfaces.Employee;
 
 import java.util.ArrayList;
@@ -17,6 +19,10 @@ public class EmployeeServices {
         Employee employeeFromDb = new EmployeeDB("123", "Tarik", "Miri", "miri.tarik@gmail.com");
 
         employees.add(employeeFromDb);
+
+        EmployeeLdap employeeFromLdap = new EmployeeLdap("chuck", "redhead", "Norris", "chucl@norris.com");
+
+        employees.add(new EmployeeAdapterLdap(employeeFromLdap));
 
         return employees;
     }
