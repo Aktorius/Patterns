@@ -31,5 +31,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="Facade" />
+    <orderEntry type="module" module-name="Flyweight" />
   </component>
 </module>
