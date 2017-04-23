@@ -1,10 +1,6 @@
 package main.java.aktorius.com.application;
 
-
-import domain.Address;
-import services.JdbcFacade;
-
-import java.util.List;
+import services.InventorySystem;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -12,20 +8,20 @@ import java.util.List;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        JdbcFacade jdbcFacade = new JdbcFacade();
+        InventorySystem inventorySystem = new InventorySystem();
 
-        jdbcFacade.createTable();
+        inventorySystem.takeOrder("Bose Headphones", 221);
+        inventorySystem.takeOrder("Samsung TV", 42);
+        inventorySystem.takeOrder("Roomba", 332);
+        inventorySystem.takeOrder("Bose Headphones", 231);
+        inventorySystem.takeOrder("Samsung TV", 456);
+        inventorySystem.takeOrder("Roomba", 337);
+        inventorySystem.takeOrder("Bose Headphones", 211);
+        inventorySystem.takeOrder("Samsung TV", 425);
+        inventorySystem.takeOrder("Roomba", 3385);
 
-        System.out.println("Table Address created");
+        inventorySystem.process();
 
-        jdbcFacade.insertIntoTable();
-
-        System.out.println("Record inserted");
-
-        List<Address> addresses = jdbcFacade.getAddresses();
-
-        for (Address address : addresses){
-            System.out.println(address);
-        }
+        System.out.println(inventorySystem.report());
     }
 }
