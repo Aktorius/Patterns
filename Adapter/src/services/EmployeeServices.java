@@ -1,11 +1,11 @@
-package main.java.aktorius.com.services;
+package services;
 
-import main.java.aktorius.com.adapters.EmployeeAdapterCSV;
-import main.java.aktorius.com.adapters.EmployeeAdapterLdap;
-import main.java.aktorius.com.datasources.EmployeeCSV;
-import main.java.aktorius.com.datasources.EmployeeDB;
-import main.java.aktorius.com.datasources.EmployeeLdap;
-import main.java.aktorius.com.interfaces.Employee;
+import adapters.EmployeeAdapterCSV;
+import datasources.EmployeeCSV;
+import datasources.EmployeeDB;
+import datasources.EmployeeLdap;
+import adapters.EmployeeAdapterLdap;
+import interfaces.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package main.java.aktorius.com.datasources;
+package datasources;
 
-import main.java.aktorius.com.interfaces.Employee;
+import interfaces.Employee;
 
 /**
  * Created by Aktorius on 20/04/2017.

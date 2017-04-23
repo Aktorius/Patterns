@@ -1,7 +1,7 @@
-package main.java.aktorius.com.adapters;
+package adapters;
 
-import main.java.aktorius.com.datasources.EmployeeCSV;
-import main.java.aktorius.com.interfaces.Employee;
+import datasources.EmployeeCSV;
+import interfaces.Employee;
 
 /**
  * Created by Aktorius on 20/04/2017.

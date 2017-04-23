@@ -1,4 +1,4 @@
-package main.java.aktorius.com.interfaces;
+package interfaces;
 
 /**
  * Created by Aktorius on 20/04/2017.

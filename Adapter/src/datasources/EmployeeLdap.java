@@ -1,4 +1,4 @@
-package main.java.aktorius.com.datasources;
+package datasources;
 
 /**
  * Created by Aktorius on 20/04/2017.

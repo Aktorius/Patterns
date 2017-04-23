@@ -1,4 +1,4 @@
-package main.java.aktorius.com.datasources;
+package datasources;
 
 import java.util.StringTokenizer;
 
