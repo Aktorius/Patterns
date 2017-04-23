@@ -25,7 +25,7 @@ public class JdbcFacade {
         try {
             Connection connection = instance.getConnection();
             Statement statement = connection.createStatement();
-            count = statement.executeUpdate("CREATE TABLE Address(ID INTEGER, StreetName VARCHAR(20), City VARCHAR (20)");
+            count = statement.executeUpdate("CREATE TABLE Address(ID INTEGER, StreetName VARCHAR(20), City VARCHAR (20))");
             statement.close();
             connection.close();
         }catch (Exception e){
@@ -39,7 +39,7 @@ public class JdbcFacade {
         try {
             Connection connection = instance.getConnection();
             Statement statement = connection.createStatement();
-            count = statement.executeUpdate("INSERT INTO Address(ID, StreetName, City) VALUES (1, 'Quadrant Road', 'London'");
+            count = statement.executeUpdate("INSERT INTO Address(ID, StreetName, City) VALUES (1, 'Quadrant Road', 'London')");
             statement.close();
             connection.close();
         }catch (Exception e){
@@ -59,7 +59,6 @@ public class JdbcFacade {
             while (resultSet.next()){
                 Address address = new Address(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3));
                 addresses.add(address);
-                System.out.println(address);
             }
         }catch (Exception e){
             e.printStackTrace();
