@@ -3,6 +3,7 @@ package main.java.aktorius.com.application;
 import abstracts.Printer;
 import domain.*;
 import interfaces.Formatter;
+import services.HtmlFormatter;
 import services.MoviePrinter;
 import services.PrintFormatter;
 
@@ -24,5 +25,10 @@ public class PatternsDemo {
         String printedMaterial = moviePrinter.print(printFormatter);
 
         System.out.println(printedMaterial);
+
+        Formatter htmlFormatter = new HtmlFormatter();
+        String htmlMaterial = moviePrinter.print(htmlFormatter);
+
+        System.out.println(htmlMaterial);
     }
 }
