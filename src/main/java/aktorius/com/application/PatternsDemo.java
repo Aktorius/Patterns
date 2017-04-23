@@ -1,6 +1,8 @@
 package main.java.aktorius.com.application;
 
-import services.InventorySystem;
+import interfaces.Twitter;
+import security.SecurityProxy;
+import services.TwitterServiceStub;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -8,20 +10,8 @@ import services.InventorySystem;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        InventorySystem inventorySystem = new InventorySystem();
+        Twitter service = (Twitter) SecurityProxy.newInstance(new TwitterServiceStub());
 
-        inventorySystem.takeOrder("Bose Headphones", 221);
-        inventorySystem.takeOrder("Samsung TV", 42);
-        inventorySystem.takeOrder("Roomba", 332);
-        inventorySystem.takeOrder("Bose Headphones", 231);
-        inventorySystem.takeOrder("Samsung TV", 456);
-        inventorySystem.takeOrder("Roomba", 337);
-        inventorySystem.takeOrder("Bose Headphones", 211);
-        inventorySystem.takeOrder("Samsung TV", 425);
-        inventorySystem.takeOrder("Roomba", 3385);
-
-        inventorySystem.process();
-
-        System.out.println(inventorySystem.report());
+        System.out.println(service.getTimeline(new String()));
     }
 }

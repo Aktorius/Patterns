@@ -32,5 +32,6 @@
     </orderEntry>
     <orderEntry type="module" module-name="Facade" />
     <orderEntry type="module" module-name="Flyweight" />
+    <orderEntry type="module" module-name="Proxy" />
   </component>
 </module>
