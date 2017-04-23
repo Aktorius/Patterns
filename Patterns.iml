@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Adapter" />
     <orderEntry type="module" module-name="Bridge" />
+    <orderEntry type="module" module-name="MovieBridge" />
   </component>
 </module>
