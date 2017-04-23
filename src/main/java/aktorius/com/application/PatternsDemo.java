@@ -1,6 +1,9 @@
 package main.java.aktorius.com.application;
 
-import domain.*;
+import domain.SimpleSandwich;
+import interfaces.Sandwich;
+import services.DressingDecorator;
+import services.MeatDecorator;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -8,19 +11,8 @@ import domain.*;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        Menu mainMenu = new Menu("Main", "/main");
-        MenuItem safetyMenuItem = new MenuItem("Safetu", "/safety");
+        Sandwich sandwich = new DressingDecorator(new MeatDecorator(new SimpleSandwich()));
 
-        mainMenu.add(safetyMenuItem);
-
-        Menu claimsSubMenu = new Menu("Claims", "/claims");
-
-        mainMenu.add(claimsSubMenu);
-
-        MenuItem personalClaimsMenu = new MenuItem("Personal Claims", "/personalClains");
-
-        claimsSubMenu.add(personalClaimsMenu);
-
-        System.out.println(mainMenu.toString());
+        System.out.println(sandwich.make());
     }
 }

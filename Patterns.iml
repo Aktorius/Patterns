@@ -11,5 +11,6 @@
     <orderEntry type="module" module-name="Bridge" />
     <orderEntry type="module" module-name="MovieBridge" />
     <orderEntry type="module" module-name="Composite" />
+    <orderEntry type="module" module-name="Decorator" />
   </component>
 </module>
