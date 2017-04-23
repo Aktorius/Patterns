@@ -2,7 +2,7 @@ package main.java.aktorius.com.application;
 
 import interfaces.Twitter;
 import security.SecurityProxy;
-import services.TwitterServiceStub;
+import services.TwitterService;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -10,8 +10,9 @@ import services.TwitterServiceStub;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        Twitter service = (Twitter) SecurityProxy.newInstance(new TwitterServiceStub());
+        Twitter service = (Twitter) SecurityProxy.newInstance(new TwitterService());
 
-        System.out.println(service.getTimeline(new String()));
+        System.out.println(service.getTimeline("TarikMiri"));
+
     }
 }
