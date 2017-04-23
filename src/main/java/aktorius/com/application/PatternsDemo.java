@@ -1,9 +1,10 @@
 package main.java.aktorius.com.application;
 
-import domain.SimpleSandwich;
-import interfaces.Sandwich;
-import services.DressingDecorator;
-import services.MeatDecorator;
+
+import domain.Address;
+import services.JdbcFacade;
+
+import java.util.List;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -11,8 +12,20 @@ import services.MeatDecorator;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        Sandwich sandwich = new DressingDecorator(new MeatDecorator(new SimpleSandwich()));
+        JdbcFacade jdbcFacade = new JdbcFacade();
 
-        System.out.println(sandwich.make());
+        jdbcFacade.createTable();
+
+        System.out.println("Table Address created");
+
+        jdbcFacade.insertIntoTable();
+
+        System.out.println("Record inserted");
+
+        List<Address> addresses = jdbcFacade.getAddresses();
+
+        for (Address address : addresses){
+            System.out.println(address);
+        }
     }
 }
