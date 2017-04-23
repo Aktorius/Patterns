@@ -1,7 +1,11 @@
 package main.java.aktorius.com.application;
 
-
-import services.EmployeeServices;
+import abstracts.Printer;
+import domain.*;
+import interfaces.Formatter;
+import services.HtmlFormatter;
+import services.MoviePrinter;
+import services.PrintFormatter;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -9,8 +13,22 @@ import services.EmployeeServices;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        EmployeeServices service = new EmployeeServices();
+        Movie movie = new Movie();
+        movie.setClassification("Action");
+        movie.setTitle("John Wick");
+        movie.setRuntime("2:15");
+        movie.setYear("2014");
 
-        System.out.println(service.getEmployeeList());
+        Formatter printFormatter = new PrintFormatter();
+        Printer moviePrinter = new MoviePrinter(movie);
+
+        String printedMaterial = moviePrinter.print(printFormatter);
+
+        System.out.println(printedMaterial);
+
+        Formatter htmlFormatter = new HtmlFormatter();
+        String htmlMaterial = moviePrinter.print(htmlFormatter);
+
+        System.out.println(htmlMaterial);
     }
 }
