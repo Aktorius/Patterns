@@ -7,24 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Adapter" />
-    <orderEntry type="module" module-name="Bridge" />
-    <orderEntry type="module" module-name="MovieBridge" />
-    <orderEntry type="module" module-name="Composite" />
-    <orderEntry type="module" module-name="Decorator" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://C:/jars/db-derby-10.13.1.1-bin/lib/derby.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/jars/db-derby-10.13.1.1-bin/lib/derbyclient.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
