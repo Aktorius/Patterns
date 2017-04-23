@@ -1,11 +1,6 @@
 package main.java.aktorius.com.application;
 
-import abstracts.Printer;
 import domain.*;
-import interfaces.Formatter;
-import services.HtmlFormatter;
-import services.MoviePrinter;
-import services.PrintFormatter;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -13,22 +8,19 @@ import services.PrintFormatter;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        Movie movie = new Movie();
-        movie.setClassification("Action");
-        movie.setTitle("John Wick");
-        movie.setRuntime("2:15");
-        movie.setYear("2014");
+        Menu mainMenu = new Menu("Main", "/main");
+        MenuItem safetyMenuItem = new MenuItem("Safetu", "/safety");
 
-        Formatter printFormatter = new PrintFormatter();
-        Printer moviePrinter = new MoviePrinter(movie);
+        mainMenu.add(safetyMenuItem);
 
-        String printedMaterial = moviePrinter.print(printFormatter);
+        Menu claimsSubMenu = new Menu("Claims", "/claims");
 
-        System.out.println(printedMaterial);
+        mainMenu.add(claimsSubMenu);
 
-        Formatter htmlFormatter = new HtmlFormatter();
-        String htmlMaterial = moviePrinter.print(htmlFormatter);
+        MenuItem personalClaimsMenu = new MenuItem("Personal Claims", "/personalClains");
 
-        System.out.println(htmlMaterial);
+        claimsSubMenu.add(personalClaimsMenu);
+
+        System.out.println(mainMenu.toString());
     }
 }
