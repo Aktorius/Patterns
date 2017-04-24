@@ -1,6 +1,8 @@
 package main.java.aktorius.com.application;
 
-import builder.LunchOrder;
+import domain.Movie;
+import services.Registry;
+
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -8,14 +10,7 @@ import builder.LunchOrder;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        LunchOrder.Builder builder = new LunchOrder.Builder();
-        builder.bread("Wheat").condiments("Lettuce").dressing("Mustard").meat("Ham");
+        Registry registry = new Registry();
 
-        LunchOrder lunchOrder = builder.build();
-
-        System.out.println(lunchOrder.getBread());
-        System.out.println(lunchOrder.getCondiments());
-        System.out.println(lunchOrder.getDressing());
-        System.out.println(lunchOrder.getMeat());
     }
 }
