@@ -1,8 +1,6 @@
 package main.java.aktorius.com.application;
 
-import interfaces.Twitter;
-import security.SecurityProxy;
-import services.TwitterService;
+import builder.LunchOrder;
 
 /**
  * Created by Aktorius on 20/04/2017.
@@ -10,9 +8,14 @@ import services.TwitterService;
 public class PatternsDemo {
 
     public static void main (String[] args){
-        Twitter service = (Twitter) SecurityProxy.newInstance(new TwitterService());
+        LunchOrder.Builder builder = new LunchOrder.Builder();
+        builder.bread("Wheat").condiments("Lettuce").dressing("Mustard").meat("Ham");
 
-        System.out.println(service.getTimeline("TarikMiri"));
+        LunchOrder lunchOrder = builder.build();
 
+        System.out.println(lunchOrder.getBread());
+        System.out.println(lunchOrder.getCondiments());
+        System.out.println(lunchOrder.getDressing());
+        System.out.println(lunchOrder.getMeat());
     }
 }
