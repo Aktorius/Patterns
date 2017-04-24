@@ -43,5 +43,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="Builder" />
+    <orderEntry type="module" module-name="Prototype" />
   </component>
 </module>
