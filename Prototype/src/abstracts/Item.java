@@ -10,7 +10,7 @@ public abstract  class Item implements Cloneable{
     private String url;
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 

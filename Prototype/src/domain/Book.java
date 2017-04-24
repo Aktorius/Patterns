@@ -1,5 +1,7 @@
 package domain;
 
+import abstracts.Item;
+
 /**
  * Created by Aktorius on 24/04/2017.
  */

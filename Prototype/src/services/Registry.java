@@ -1,7 +1,7 @@
 package services;
 
+import abstracts.Item;
 import domain.Book;
-import domain.Item;
 import domain.Movie;
 
 import java.util.HashMap;
@@ -19,6 +19,12 @@ public class Registry {
 
     public Item createItem(String type){
         Item item = null;
+
+        try {
+            item = (Item)(items.get(type)).clone();
+        }catch (CloneNotSupportedException ex){
+            ex.printStackTrace();
+        }
 
         return item;
     }
